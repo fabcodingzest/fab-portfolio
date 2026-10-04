@@ -47,14 +47,14 @@ export default function HeroBackground() {
       canvas.width = Math.round(w * dpr);
       canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(90, Math.max(18, Math.round((w * h) / 16000)));
+      const count = Math.min(140, Math.max(28, Math.round((w * h) / 9000)));
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
         z: 0.25 + Math.random() * 0.75,
-        vx: (Math.random() - 0.5) * 0.12,
-        vy: (Math.random() - 0.5) * 0.12,
-        glyph: Math.random() < 0.18 ? GLYPHS[Math.floor(Math.random() * GLYPHS.length)] : undefined,
+        vx: (Math.random() - 0.5) * 0.24,
+        vy: (Math.random() - 0.5) * 0.24,
+        glyph: Math.random() < 0.2 ? GLYPHS[Math.floor(Math.random() * GLYPHS.length)] : undefined,
         tw: Math.random() * Math.PI * 2,
       }));
     };
@@ -67,7 +67,7 @@ export default function HeroBackground() {
       const px = mouse.x - w / 2;
       const py = mouse.y - h / 2;
 
-      const pts = particles.map((p) => ({ p, x: p.x - px * p.z * 0.05, y: p.y - py * p.z * 0.05 }));
+      const pts = particles.map((p) => ({ p, x: p.x - px * p.z * 0.09, y: p.y - py * p.z * 0.09 }));
 
       // faint links between nearby particles, brighter near the cursor
       for (let i = 0; i < pts.length; i++) {
@@ -77,11 +77,11 @@ export default function HeroBackground() {
           const b = pts[j];
           if (b.p.glyph) continue;
           const d = Math.hypot(a.x - b.x, a.y - b.y);
-          if (d > 120) continue;
-          let alpha = (1 - d / 120) * 0.12 * Math.min(a.p.z, b.p.z);
+          if (d > 140) continue;
+          let alpha = (1 - d / 140) * 0.28 * Math.min(a.p.z, b.p.z);
           if (mouse.active) {
             const dm = Math.hypot((a.x + b.x) / 2 - mouse.x, (a.y + b.y) / 2 - mouse.y);
-            if (dm < 160) alpha += (1 - dm / 160) * 0.35;
+            if (dm < 200) alpha += (1 - dm / 200) * 0.5;
           }
           ctx.strokeStyle = `rgba(${color}, ${alpha})`;
           ctx.lineWidth = 1;
@@ -93,15 +93,15 @@ export default function HeroBackground() {
       }
 
       for (const { p, x, y } of pts) {
-        const twinkle = 0.65 + 0.35 * Math.sin(t * 0.0012 + p.tw);
+        const twinkle = 0.6 + 0.4 * Math.sin(t * 0.0016 + p.tw);
         if (p.glyph) {
-          ctx.font = `${Math.round(10 + p.z * 8)}px ui-monospace, Menlo, Consolas, monospace`;
-          ctx.fillStyle = `rgba(${color}, ${0.1 + p.z * 0.16})`;
+          ctx.font = `${Math.round(12 + p.z * 10)}px ui-monospace, Menlo, Consolas, monospace`;
+          ctx.fillStyle = `rgba(${color}, ${(0.2 + p.z * 0.32) * twinkle})`;
           ctx.fillText(p.glyph, x, y);
         } else {
-          ctx.fillStyle = `rgba(${color}, ${(0.18 + p.z * 0.5) * twinkle})`;
+          ctx.fillStyle = `rgba(${color}, ${(0.35 + p.z * 0.6) * twinkle})`;
           ctx.beginPath();
-          ctx.arc(x, y, 0.6 + p.z * 1.4, 0, Math.PI * 2);
+          ctx.arc(x, y, 0.9 + p.z * 1.8, 0, Math.PI * 2);
           ctx.fill();
         }
       }
