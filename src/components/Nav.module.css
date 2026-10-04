@@ -1,0 +1,76 @@
+/* Fixed-feel header: translucent, blurred, hairline border; links centred. */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 60%, transparent);
+  transition: transform 260ms var(--ease-out);
+}
+
+/* slides away while scrolling down, back on scroll up */
+.nav[data-hidden="true"] {
+  transform: translateY(-100%);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  height: 64px;
+}
+
+.brand {
+  justify-self: start;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.links {
+  display: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 160ms;
+}
+
+.links a:hover {
+  color: var(--fg);
+}
+
+.actions {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resume {
+  height: 36px;
+  padding-inline: 16px;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 900px) {
+  .links {
+    display: flex;
+  }
+}

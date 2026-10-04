@@ -1,0 +1,32 @@
+.frame {
+  position: relative;
+  aspect-ratio: 589 / 1280;
+  border-radius: 14% / 6.5%;
+  background: var(--bezel);
+  box-shadow:
+    0 1px 0 1px color-mix(in srgb, var(--bezel) 70%, white) inset,
+    0 40px 80px -40px rgb(0 0 0 / 0.35);
+}
+
+/* insets are % of the frame itself, so the bezel scales with the phone */
+.screen {
+  position: absolute;
+  inset: 1.2% 2.6%;
+  overflow: hidden;
+  border-radius: 11.6% / 5.4%;
+  background: #140233;
+}
+
+.shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.shot[data-active="true"] {
+  opacity: 1;
+}

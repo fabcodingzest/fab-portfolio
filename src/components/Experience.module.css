@@ -1,0 +1,79 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job {
+  padding-block: 40px;
+  border-top: 1px solid var(--rule);
+}
+
+.job:first-child {
+  border-top: 0;
+  padding-top: 8px;
+}
+
+.company {
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.role {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.when {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.summary {
+  max-width: 44rem;
+  margin-top: 16px;
+}
+
+.groups {
+  display: grid;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+@media (min-width: 900px) {
+  .groups {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 56px;
+  }
+}
+
+/* a single bullet group uses the full width */
+.group:only-child {
+  grid-column: 1 / -1;
+}
+
+.group h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.job ul {
+  display: grid;
+  gap: 8px;
+  max-width: 44rem;
+  margin-top: 10px;
+  padding-left: 1.1em;
+  color: var(--muted);
+}
+
+.job li::marker {
+  color: var(--accent);
+}
+

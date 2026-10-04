@@ -1,0 +1,102 @@
+/* Only where there's room beside the 1240px content column. */
+.rail {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .rail {
+    display: block;
+    position: fixed;
+    left: 28px;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+  }
+
+  /* appears once you scroll past the hero */
+  .rail[data-visible="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.track {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--rule);
+  overflow: hidden;
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform-origin: top;
+  transition: transform 120ms linear;
+}
+
+.rail ol {
+  position: relative;
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rail a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.dot {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--rule);
+  border-radius: 50%;
+  background: var(--bg);
+  transition:
+    border-color 200ms,
+    background-color 200ms,
+    transform 200ms var(--ease-out);
+}
+
+/* labels stay quiet until hovered, except the current one */
+.label {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 200ms,
+    transform 200ms var(--ease-out),
+    color 200ms;
+}
+
+.rail a:hover .label,
+.rail a:focus-visible .label,
+.rail a[data-active="true"] .label {
+  opacity: 1;
+  transform: none;
+}
+
+.rail a[data-active="true"] {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.rail a[data-active="true"] .dot {
+  border-color: var(--accent);
+  background: var(--accent);
+  transform: scale(1.15);
+}

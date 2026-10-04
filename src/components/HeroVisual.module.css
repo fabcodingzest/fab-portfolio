@@ -1,0 +1,319 @@
+.wrap {
+  position: relative;
+  width: min(100%, 600px);
+  margin-inline: auto;
+  padding: clamp(22px, 6vw, 34px) clamp(22px, 6vw, 34px) 0;
+}
+
+/* The editor stays dark in both themes, like a real code editor. */
+.monitor {
+  padding: clamp(10px, 2.4vw, 16px);
+  border: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: 18px;
+  background: #121116;
+  box-shadow: 0 34px 70px -34px rgb(0 0 0 / 0.6);
+}
+
+/* Text sizes follow the screen's own width, so lines never wrap at any size. */
+.screen {
+  container-type: inline-size;
+  padding: 4.5cqi 5cqi 4cqi;
+  border-radius: 10px;
+  background: #0b0a0e;
+}
+
+/* ---------- title bar ---------- */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 3cqi;
+}
+
+.dots {
+  display: flex;
+  gap: 1.8cqi;
+}
+
+.dots span {
+  width: 2.6cqi;
+  height: 2.6cqi;
+  max-width: 12px;
+  max-height: 12px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.dots span:nth-child(2) {
+  background: #febc2e;
+}
+
+.dots span:nth-child(3) {
+  background: #28c840;
+}
+
+.file {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: min(3.6cqi, 0.875rem);
+  color: #a9a6b3;
+}
+
+.lang {
+  margin-left: auto;
+  padding: 0.6cqi 2.2cqi;
+  border-radius: 999px;
+  font-size: min(3.1cqi, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid currentColor;
+}
+
+.ts {
+  color: #82aaff;
+}
+
+.rn {
+  color: #61dafb;
+}
+
+.html {
+  color: #f78c6c;
+}
+
+.css {
+  color: #c792ea;
+}
+
+.node {
+  color: #8bd16f;
+}
+
+/* ---------- code ---------- */
+.body,
+.file,
+.lang {
+  transition:
+    opacity 350ms ease,
+    transform 350ms ease;
+}
+
+.body[data-fading="true"],
+.file[data-fading="true"],
+.lang[data-fading="true"] {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.code {
+  margin: 6cqi 0 0;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: min(4.1cqi, 1rem);
+  line-height: 1.85;
+  white-space: pre;
+  color: #d6d4dd;
+}
+
+.line {
+  display: block;
+}
+
+.ln {
+  display: inline-block;
+  width: 2.2em;
+  color: #4b4856;
+  user-select: none;
+}
+
+.kw {
+  color: #c792ea;
+}
+
+.id {
+  color: #82aaff;
+}
+
+.str {
+  color: #c3e88d;
+}
+
+.fn {
+  color: #89ddff;
+}
+
+.tag {
+  color: #f07178;
+}
+
+.attr {
+  color: #ffcb6b;
+}
+
+.prop {
+  color: #b2ccd6;
+}
+
+.num {
+  color: #f78c6c;
+}
+
+.p {
+  color: #d6d4dd;
+}
+
+.term {
+  margin-top: 5cqi;
+  padding: 2cqi 3cqi;
+  border-radius: 6px;
+  background: #16151b;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: min(3.7cqi, 0.9rem);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* which snippet is showing */
+.progress {
+  display: flex;
+  gap: 1.4cqi;
+  margin-top: 4cqi;
+}
+
+.progress span {
+  height: 3px;
+  flex: 1;
+  border-radius: 999px;
+  background: #24222b;
+  transition: background-color 350ms ease;
+}
+
+.progress span[data-active="true"] {
+  background: var(--accent);
+}
+
+/* ---------- stand ---------- */
+.stand {
+  width: 22%;
+  height: 18px;
+  margin: 0 auto;
+  border: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  background: #121116;
+}
+
+.base {
+  width: 40%;
+  height: 8px;
+  margin: 4px auto 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--fg) 12%, transparent);
+}
+
+/* ---------- floating badges ---------- */
+.badge {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(50px, 13vw, 72px);
+  height: clamp(50px, 13vw, 72px);
+  border-radius: 50%;
+  border: 1.5px solid;
+  backdrop-filter: blur(6px);
+}
+
+.badge svg {
+  width: 44%;
+  height: 44%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.codeBadge {
+  top: 0;
+  left: 0;
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  background: color-mix(in srgb, var(--accent) 16%, var(--bg));
+}
+
+.phone {
+  top: 40%;
+  right: 0;
+  color: #38bdf8;
+  border-color: rgb(56 189 248 / 0.55);
+  background: color-mix(in srgb, #38bdf8 14%, var(--bg));
+}
+
+.coffee {
+  bottom: 22px;
+  right: 9%;
+  color: #fb923c;
+  border-color: rgb(251 146 60 / 0.55);
+  background: color-mix(in srgb, #fb923c 14%, var(--bg));
+}
+
+/*
+  Load: the editor fades up and the badges pop in. Then the code and coffee
+  badges bounce, and the phone badge fades in and out on a loop.
+  Reduced motion stops all of this (globals.css) and the snippets stop cycling.
+*/
+.monitor,
+.stand,
+.base {
+  animation: fade-up 800ms var(--ease-out) 300ms both;
+}
+
+/* All three loops share one 2.6s beat and start together, so they stay in sync. */
+.codeBadge {
+  animation:
+    pop 500ms var(--ease-out) 700ms both,
+    bounce 2.6s ease-in-out 1.3s infinite;
+}
+
+.coffee {
+  animation:
+    pop 500ms var(--ease-out) 800ms both,
+    bounce 2.6s ease-in-out 1.3s infinite;
+}
+
+.phone {
+  animation:
+    pop 500ms var(--ease-out) 750ms both,
+    pulse-fade 2.6s ease-in-out 1.3s infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes pulse-fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
