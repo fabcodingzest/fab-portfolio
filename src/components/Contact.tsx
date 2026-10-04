@@ -58,7 +58,7 @@ export default function Contact() {
                     <a className="link" href="https://linkedin.com/in/fabcodingzest" target="_blank" rel="noopener noreferrer">
                       LinkedIn
                     </a>
-                    <a className="link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a className="link" href="/resume.pdf" target="_blank" rel="noopener noreferrer" data-track="resume_open" data-label="contact">
                       Resume
                     </a>
                   </p>

@@ -70,12 +70,12 @@ export default function Projects() {
                 {(p.github || p.demo) && (
                   <p className={styles.links}>
                     {p.demo && (
-                      <a className="link" href={p.demo} target="_blank" rel="noopener noreferrer">
+                      <a className="link" href={p.demo} target="_blank" rel="noopener noreferrer" data-track="project_demo" data-label={p.name}>
                         Live demo<span className="visually-hidden"> of {p.name} (opens in a new tab)</span>
                       </a>
                     )}
                     {p.github && (
-                      <a className="link" href={p.github} target="_blank" rel="noopener noreferrer">
+                      <a className="link" href={p.github} target="_blank" rel="noopener noreferrer" data-track="project_github" data-label={p.name}>
                         GitHub<span className="visually-hidden"> repository for {p.name} (opens in a new tab)</span>
                       </a>
                     )}

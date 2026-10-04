@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "./Analytics";
 import styles from "./ContactForm.module.css";
 
 type Status = { state: "idle" | "sending" | "sent" } | { state: "error"; message: string };
@@ -22,6 +23,7 @@ export default function ContactForm() {
       if (!res.ok || !data.ok) throw new Error(data.error ?? "Couldn't send your message. Please email me directly.");
       form.reset();
       setStatus({ state: "sent" });
+      track("contact_submit");
     } catch (err) {
       setStatus({ state: "error", message: err instanceof Error ? err.message : String(err) });
     }

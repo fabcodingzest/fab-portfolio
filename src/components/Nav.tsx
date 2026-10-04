@@ -67,7 +67,7 @@ export default function Nav() {
           </ul>
           <div className={styles.actions}>
             <ThemeToggle />
-            <a className={`button ${styles.resume}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a className={`button ${styles.resume}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer" data-track="resume_open" data-label="header">
               Resume
             </a>
           </div>

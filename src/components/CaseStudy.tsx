@@ -109,11 +109,11 @@ export default function CaseStudy() {
         </h2>
         <p className="intro-text">
           A community-driven social app for the BTS fan community, live on the{" "}
-          <a className="link" href={APP_STORE}>
+          <a className="link" href={APP_STORE} data-track="store_click" data-label="app_store">
             App Store
           </a>{" "}
           and{" "}
-          <a className="link" href={PLAY_STORE}>
+          <a className="link" href={PLAY_STORE} data-track="store_click" data-label="google_play">
             Google Play
           </a>
           . I&rsquo;ve been on the founding team since November 2022 and have led the mobile app since its first commit
