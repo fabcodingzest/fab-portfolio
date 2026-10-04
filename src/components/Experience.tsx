@@ -15,7 +15,7 @@ const JOBS: Job[] = [
     dates: "Nov 2022 – Present",
     place: "Remote, international team",
     summary:
-      "Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. The case study above has the details.",
+      "Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Live on the App Store and Google Play since June 2026; the case study above has the details.",
     groups: [
       {
         points: [

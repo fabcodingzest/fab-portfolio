@@ -6,10 +6,10 @@ import styles from "./Nav.module.css";
 
 const LINKS = [
   { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Stack" },
+  { href: "#work", label: "Work" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
 

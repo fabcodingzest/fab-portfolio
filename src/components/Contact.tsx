@@ -73,7 +73,13 @@ export default function Contact() {
           </div>
         </div>
 
-        <p className={styles.small}>© 2026 Fabeha Rizvi</p>
+        <p className={styles.small}>
+          Built with
+          <svg viewBox="0 0 24 24" role="img" aria-label="love">
+            <path d="M12 21s-7.5-4.6-10-9.3C.3 8.4 2.2 4.5 6 4.5c2.2 0 3.6 1.2 4.4 2.4L12 9l1.6-2.1c.8-1.2 2.2-2.4 4.4-2.4 3.8 0 5.7 3.9 4 7.2C19.5 16.4 12 21 12 21Z" />
+          </svg>
+          by Fabeha Rizvi © {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   );

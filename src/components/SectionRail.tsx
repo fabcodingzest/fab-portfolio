@@ -5,10 +5,9 @@ import styles from "./SectionRail.module.css";
 
 const SECTIONS = [
   { id: "about", label: "About" },
-  { id: "work", label: "Boraami" },
-  { id: "experience", label: "Experience" },
   { id: "skills", label: "Stack" },
-  { id: "projects", label: "Projects" },
+  { id: "work", label: "Work" },
+  { id: "experience", label: "Experience" },
   { id: "next", label: "Next role" },
   { id: "contact", label: "Contact" },
 ];

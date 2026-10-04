@@ -1,3 +1,244 @@
+/* ---------- featured project card ---------- */
+.featured {
+  display: grid;
+  gap: 32px;
+  margin-top: 40px;
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  background: var(--bg-raised);
+  scroll-margin-top: 80px;
+}
+
+@media (min-width: 960px) {
+  .featured {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    align-items: center;
+    gap: 56px;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.featuredTitle {
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.featuredLead {
+  max-width: 40rem;
+  margin-top: 14px;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  margin: 24px 0 0;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.stats dt {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.since {
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.metaLine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* separators only where the line has room to stay on one row */
+@media (min-width: 600px) {
+  .metaLine span + span::before {
+    content: "·";
+    margin-right: 18px;
+    color: var(--muted);
+  }
+}
+
+@media (max-width: 599px) {
+  .since {
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.metaLine {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  margin-top: 28px;
+  font-weight: 500;
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* desktop: the hint sits under the button row */
+@media (min-width: 600px) {
+  .hint {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: -4px;
+  }
+}
+
+.stores {
+  display: flex;
+  gap: 10px;
+}
+
+/* App Store / Google Play: outlined pills the same height as the main button */
+.store {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding-inline: 16px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 160ms, color 160ms;
+}
+
+.store svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (hover: hover) {
+  .store:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+/* phones: main button on its own full-width row, store buttons side by side below */
+@media (max-width: 599px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions :global(.button) {
+    justify-content: center;
+  }
+
+  .stores > .store {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .hint {
+    text-align: center;
+  }
+}
+
+/* arrow on the case study button: points down, flips up when open */
+.chevron {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 260ms var(--ease-out);
+}
+
+button[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.actions button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+}
+
+.featuredPhone {
+  width: min(200px, 55vw);
+  justify-self: center;
+}
+
+@media (min-width: 960px) {
+  .featuredPhone {
+    width: 240px;
+  }
+}
+
+.details {
+  scroll-margin-top: 80px;
+}
+
+/* the case study fades up as it opens (reduced motion turns this off in globals.css) */
+.details:not([hidden]) {
+  animation: details-in 420ms var(--ease-out) both;
+}
+
+@keyframes details-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
 .meta {
   display: grid;
   gap: 20px;
@@ -67,7 +308,7 @@
   }
 }
 
-.step h3 {
+.step h4 {
   font-size: 1.375rem;
   font-weight: 600;
   letter-spacing: -0.015em;
@@ -75,8 +316,9 @@
 }
 
 /* optional context line for a step, before the frontend/backend pair */
-.why {
-  margin-top: 12px;
+.plain {
+  margin-top: 10px;
+  font-size: 1.0625rem;
   color: var(--fg);
 }
 
@@ -132,7 +374,7 @@
     padding-top: 0;
   }
 
-  .step h3 {
+  .step h4 {
     font-size: 1.75rem;
   }
 
@@ -172,7 +414,7 @@
   }
 }
 
-.learned h4 {
+.learned h5 {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.3;
@@ -184,6 +426,33 @@
   color: var(--muted);
 }
 
-.step h3 {
+.step h4 {
   color: var(--fg);
+}
+
+/* ---------- phones: inline screenshots instead of the pinned phone ---------- */
+.stepPhone {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .phoneWrap {
+    display: none;
+  }
+
+  .stepPhone {
+    display: block;
+    width: min(48vw, 200px);
+    margin: 0 auto 20px;
+  }
+
+  .step {
+    min-height: 0;
+    padding-block: 32px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .step:first-child {
+    border-top: 0;
+  }
 }
