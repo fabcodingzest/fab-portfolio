@@ -38,7 +38,7 @@ Right side: theme switch (light/dark) and a **Resume** button.
 **Headline:** FRONTEND / ENGINEER (first line in the accent colour)
 
 **Intro:**
-> I'm **Fabeha**, a frontend engineer in Delhi. I build web and cross-platform mobile apps with React and React Native. Most recently I co-founded Boraami, a social app for the BTS fan community, and lead its app with a small remote team.
+> I'm **Fabeha**, a frontend engineer in Delhi. I build web and cross-platform mobile apps with React and React Native. Most recently I co-founded Boraami, a social app for the BTS fan community, and lead its app with a multinational team across 5+ countries.
 
 **Button:** Let's talk (scrolls to Contact)
 **Status line:** Open to full-time roles
@@ -139,9 +139,12 @@ A gated, moderated community needs a place for moderators to work. I built the R
 
 Stack chips: TypeScript, React, Vite, shadcn/ui, Cloudflare Workers
 
-### Link preview
+### Link previews
 
-`/work/boraami` has its own preview image (generated at build time): the Boraami title, a one-line summary, the three stats, and the Boraline screenshot in a phone frame.
+Both pages have preview images generated at build time, in the site's fonts and dark colours, with a lilac call-to-action pill. Site name: "Fabeha Rizvi". Descriptions stay under about 150 characters.
+
+- **Home:** "Open to full-time roles", FRONTEND ENGINEER, a one-line summary, "See my work", name and fabcodingzest.com, the Boraami welcome screen in a phone frame. No stats (they stay in the case study).
+- **/work/boraami:** the Boraami title, a one-line summary, the three stats, "Read the case study", and the Boraline screenshot in a phone frame.
 
 ### What Boraami taught me
 

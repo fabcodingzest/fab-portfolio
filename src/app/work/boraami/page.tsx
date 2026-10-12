@@ -10,7 +10,8 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Boraami case study · Fab, Frontend Engineer",
   description:
-    "How I built Boraami, a social app for the BTS fan community, from its first commit to the App Store and Google Play: the feed, notifications, a gated community, trust and safety, and 99.7% crash-free users.",
+    "How I built Boraami, a social app for BTS fans, from first commit to both app stores: fast feed, live notifications, moderation, 99.7% crash-free.",
+  openGraph: { siteName: "Fabeha Rizvi", type: "article" },
 };
 
 export default function BoraamiPage() {

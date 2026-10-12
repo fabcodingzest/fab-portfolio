@@ -18,10 +18,11 @@ const instrument = Instrument_Sans({
 
 export const metadata: Metadata = {
   // Netlify sets URL to the site's main address at build time; it makes link-preview images absolute
-  metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.URL ?? (process.env.NODE_ENV === "production" ? "https://fabcodingzest.com" : "http://localhost:3000")),
   title: "Fab, Frontend Engineer",
   description:
-    "Frontend engineer in Delhi building web and cross-platform mobile apps with React and React Native. Co-founder and frontend lead at Boraami, on the App Store and Google Play.",
+    "Frontend engineer in Delhi building web and mobile apps with React and React Native. Co-founder and frontend lead of Boraami, live on both app stores.",
+  openGraph: { siteName: "Fabeha Rizvi", type: "website" },
 };
 
 export const viewport: Viewport = {

@@ -38,7 +38,7 @@ export default function Intro() {
               <a className="link" href="#work">
                 Boraami
               </a>
-              , a social app for the BTS fan community, and lead its app with a small remote team.
+              , a social app for the BTS fan community, and lead its app with a multinational team across 5+ countries.
             </p>
             <div className={styles.actions}>
               <a className="button" href="#contact">
