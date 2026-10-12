@@ -2,7 +2,7 @@
 
 Everything on the portfolio site, in one place. All of it is factual: from my resume, my Boraami repos and docs, and my own words. **Please use this text as-is and don't add numbers, percentages or claims that aren't here.**
 
-**Tone:** humble and polite, proud of the work but not salesy. Boraami serves a fan community; it isn't "solving the world's problems". Keep the numbers in the Boraami section, not as big hero stats.
+**Tone:** direct and confident, proud of the work. No hype, no invented words or numbers, no exaggeration. Boraami serves a fan community; it isn't "solving the world's problems". Keep the numbers in the Boraami section, not as big hero stats.
 
 ---
 
@@ -72,7 +72,7 @@ Three items in a row (stacked on phones), each with a big condensed title:
 
 - **Ship end to end:** Web, mobile and backend. I took Boraami from its first commit to both app stores, and built its admin dashboard and much of its backend along the way.
 - **Own what others skip:** Releases, store reviews, crash fixes and security housekeeping: the unglamorous work that keeps an app running for real people.
-- **Make teams faster:** Code reviews, test scripts and, as the team grew, short specs and API contracts, so teammates can work in parallel instead of waiting on me.
+- **Make teams faster:** Code reviews, test scripts and, as the team grew, specs and API contracts, so teammates can work in parallel instead of waiting on me.
 
 **This is me.**
 > Frontend engineer with 3+ years of experience, starting in React on the web and moving into React Native. At Boraami, which I co-founded, I lead the frontend with a multinational team across 5+ countries, working on the mobile app, the admin dashboard and, more recently, the Node.js backend.
@@ -86,7 +86,7 @@ Three items in a row (stacked on phones), each with a big condensed title:
 The home page shows a Boraami card with a "Read the case study" link. The full case study has its own page at `/work/boraami`: header, context intro, the feature walkthrough, what Boraami taught me, then links back to work and to contact.
 
 **Intro:**
-> A community-driven social app for the BTS fan community, live on the App Store and Google Play. I've been on the founding team since November 2022 and have led the mobile app since its first commit in January 2024.
+> A community-driven social app for the BTS fan community, live on the App Store and Google Play. I co-founded it in November 2022 and have led the mobile app since its first commit in January 2024.
 
 **Store links**
 - App Store: https://apps.apple.com/in/app/boraami/id6749337745
@@ -105,12 +105,12 @@ The home page shows a Boraami card with a "Read the case study" link. The full c
 
 - **The problem:** ARMY is one of the biggest fandoms in the world, and big open platforms tend to fill up with spam and trolls. Boraami is a calm, friendly space built for genuine fans, with the app, its moderation and its backend designed around keeping it that way.
 - **My role:** Co-founder, Frontend Lead
-  - Founding team since Nov 2022: product concept, design direction and team coordination.
+  - Co-founder since Nov 2022: product concept, design direction and team coordination.
   - Set up the React Native app from its first commit in Jan 2024 and wrote about three quarters of its commits.
   - Led a team of 4 developers, and the main backend developer since mid-2025.
 - **Team:** Multinational, across 5+ countries
 - **Stack:** React Native, Expo, Tamagui, Redux Toolkit, Socket.IO, Node.js, Express, MongoDB
-- **Timeline:** Nov 2022 founding team · Jan 2024 first commit · Mid-2025 took over the backend · 15 Jun 2026 public launch
+- **Timeline:** Nov 2022 co-founded Boraami · Jan 2024 first commit · Mid-2025 took over the backend · 15 Jun 2026 public launch
 
 ### Feature walkthrough (scroll-driven phone)
 
@@ -149,8 +149,8 @@ Both pages have preview images generated at build time, in the site's fonts and 
 ### What Boraami taught me
 
 1. **Learning whatever the project needs.** Boraami is where I learned mobile development, building on my React web experience. When the backend needed someone, I learned Node.js and MongoDB on the job and took it over. In 2026 I also brought Claude Code into my workflow to move faster before launch.
-2. **Taking things all the way to done.** Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, rotating credentials across services, and helping register the company.
-3. **Bringing in process as we grew.** We started as a multinational team across 5+ countries, focused on shipping. As the app and team grew, I started writing a short spec and API contract before a feature, so teammates could build against mocks while I built the backend, plus review guides so everyone checks for the same things. I also help hire and review pull requests.
+2. **Taking things all the way to done.** Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, and rotating credentials across services. On the business side, I proposed forming Boraami LLC and set it up with my co-founder.
+3. **Bringing in process as we grew.** We started as a multinational team across 5+ countries, focused on shipping. As the app and team grew, I introduced specs and API contracts before each feature, so teammates could build against mocks while I built the backend, and review guides so everyone checks for the same things. I also hire and review pull requests.
 4. **Working across teams and time zones.** Our team spans several continents and time zones. I work closely with design, product and moderators, meeting whenever we need to align, and write step-by-step device test scripts so teammates can verify a release on their own phones.
 
 ---
@@ -160,13 +160,13 @@ Both pages have preview images generated at build time, in the site's fonts and 
 ### Co-founder, Frontend Lead · Boraami LLC
 Nov 2022 – Present · Remote, international team
 
-> Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Links to the Boraami case study page.
+> Co-founder since Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Links to the Boraami case study page.
 
 - Set up the React Native app (Expo, Tamagui), wrote about three quarters of its commits, and ship it to the App Store and Google Play with EAS.
 - Main backend developer since mid-2025 (Node.js, Express, MongoDB): moderation, notifications, the admission quiz and image uploads.
 - Built the React admin dashboard (TypeScript, Vite, shadcn/ui, Cloudflare Workers) that moderators use to review applicants, reports and users.
 - Lead a team of 4 frontend developers across time zones: hiring, code reviews, a shared component library with light and dark themes, and, more recently, specs and API contracts.
-- Helped run the organisation beyond code: company registration, store accounts and the App Store transfer.
+- Proposed forming Boraami LLC and set it up with my co-founder; handled the store developer accounts and the App Store transfer to the company.
 
 *(Commit shares are from git, counting non-merge commits across all branches as of Oct 2026: app ~74%, admin dashboard 100%, backend ~85% since June 2025.)*
 
@@ -219,9 +219,9 @@ Second-highest contributor in the GirlScript Uplift open-source program, in a te
 Four cards in a 2×2 grid:
 
 - **Roles:** Frontend roles with React and TypeScript, React Native and mobile roles, or full-stack roles that lean frontend, like my work at Boraami.
-- **Team:** A product team that ships to real users, where I can own features from the interface to the API and keep learning from people more experienced than me.
+- **Team:** A product team that ships to real users, where I can own features from the interface to the API and grow alongside strong engineers.
 - **Where:** Remote, or hybrid and on-site in Delhi NCR or Bangalore. I'm also open to roles abroad that offer visa sponsorship.
-- **How I work with AI:** I use AI tools like Claude Code every day to explore unfamiliar code, draft tests and reviews, and move faster, and I check everything they produce. Next, I'd like to work on a team that builds AI-powered features into real products, and learn that side properly.
+- **How I work with AI:** I use AI tools like Claude Code every day to explore unfamiliar code, draft tests and reviews, and move faster, and I check everything they produce. Next, I want to build AI-powered features into real products.
 
 *(Don't claim experience with AI APIs or ML. The interest is stated as what I want to learn next.)*
 

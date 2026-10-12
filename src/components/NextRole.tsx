@@ -7,7 +7,7 @@ const ITEMS = [
   },
   {
     title: "Team",
-    body: "A product team that ships to real users, where I can own features from the interface to the API and keep learning from people more experienced than me.",
+    body: "A product team that ships to real users, where I can own features from the interface to the API and grow alongside strong engineers.",
   },
   {
     title: "Where",
@@ -15,7 +15,7 @@ const ITEMS = [
   },
   {
     title: "How I work with AI",
-    body: "I use AI tools like Claude Code every day to explore unfamiliar code, draft tests and reviews, and move faster, and I check everything they produce. Next, I'd like to work on a team that builds AI-powered features into real products, and learn that side properly.",
+    body: "I use AI tools like Claude Code every day to explore unfamiliar code, draft tests and reviews, and move faster, and I check everything they produce. Next, I want to build AI-powered features into real products.",
   },
 ];
 

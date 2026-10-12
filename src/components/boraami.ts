@@ -20,7 +20,7 @@ export const PROBLEM =
   "ARMY is one of the biggest fandoms in the world, and big open platforms tend to fill up with spam and trolls. Boraami is a calm, friendly space built for genuine fans, with the app, its moderation and its backend designed around keeping it that way.";
 
 export const ROLE = [
-  "Founding team since Nov 2022: product concept, design direction and team coordination.",
+  "Co-founder since Nov 2022: product concept, design direction and team coordination.",
   "Set up the React Native app from its first commit in Jan 2024 and wrote about three quarters of its commits.",
   "Led a team of 4 developers, and the main backend developer since mid-2025.",
 ];
@@ -30,7 +30,7 @@ export const TEAM = "Multinational, across 5+ countries";
 export const STACK = "React Native, Expo, Tamagui, Redux Toolkit, Socket.IO, Node.js, Express, MongoDB";
 
 export const TIMELINE = [
-  { date: "Nov 2022", label: "Founding team" },
+  { date: "Nov 2022", label: "Co-founded Boraami" },
   { date: "Jan 2024", label: "First commit" },
   { date: "Mid-2025", label: "Took over the backend" },
   { date: "15 Jun 2026", label: "Public launch" },
@@ -90,11 +90,11 @@ export const LEARNED = [
   },
   {
     title: "Taking things all the way to done",
-    body: "Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, rotating credentials across services, and helping register the company.",
+    body: "Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, and rotating credentials across services. On the business side, I proposed forming Boraami LLC and set it up with my co-founder.",
   },
   {
     title: "Bringing in process as we grew",
-    body: "We started as a multinational team across 5+ countries, focused on shipping. As the app and team grew, I started writing a short spec and API contract before a feature, so teammates could build against mocks while I built the backend, plus review guides so everyone checks for the same things. I also help hire and review pull requests.",
+    body: "We started as a multinational team across 5+ countries, focused on shipping. As the app and team grew, I introduced specs and API contracts before each feature, so teammates could build against mocks while I built the backend, and review guides so everyone checks for the same things. I also hire and review pull requests.",
   },
   {
     title: "Working across teams and time zones",

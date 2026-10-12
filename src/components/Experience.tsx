@@ -16,7 +16,7 @@ const JOBS: Job[] = [
     dates: "Nov 2022 – Present",
     place: "Remote, international team",
     summary:
-      "Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Live on the App Store and Google Play since June 2026.",
+      "Co-founder since Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Live on the App Store and Google Play since June 2026.",
     caseStudy: "/work/boraami",
     groups: [
       {
@@ -25,7 +25,7 @@ const JOBS: Job[] = [
           "Main backend developer since mid-2025 (Node.js, Express, MongoDB): moderation, notifications, the admission quiz and image uploads.",
           "Built the React admin dashboard (TypeScript, Vite, shadcn/ui, Cloudflare Workers) that moderators use to review applicants, reports and users.",
           "Lead a team of 4 frontend developers across time zones: hiring, code reviews, a shared component library with light and dark themes, and, more recently, specs and API contracts.",
-          "Helped run the organisation beyond code: company registration, store accounts and the App Store transfer.",
+          "Proposed forming Boraami LLC and set it up with my co-founder; handled the store developer accounts and the App Store transfer to the company.",
         ],
       },
     ],

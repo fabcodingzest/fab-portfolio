@@ -13,7 +13,7 @@ const BRING = [
   },
   {
     title: "Make teams faster",
-    body: "Code reviews, test scripts and, as the team grew, short specs and API contracts, so teammates can work in parallel instead of waiting on me.",
+    body: "Code reviews, test scripts and, as the team grew, specs and API contracts, so teammates can work in parallel instead of waiting on me.",
   },
 ];
 
