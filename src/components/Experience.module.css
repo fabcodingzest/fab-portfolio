@@ -40,6 +40,12 @@
   margin-top: 16px;
 }
 
+.caseLink {
+  font-weight: 500;
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
 .groups {
   display: grid;
   gap: 28px;

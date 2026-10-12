@@ -1,16 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import styles from "./Nav.module.css";
 
 const LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Stack" },
-  { href: "#work", label: "Work" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Stack" },
+  { href: "/#work", label: "Work" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const NAV_HEIGHT = 64;
@@ -55,13 +56,13 @@ export default function Nav() {
         onFocus={() => setHidden(false)}
       >
         <div className={`container ${styles.inner}`}>
-          <a href="#top" className={styles.brand} aria-label="Fabeha Rizvi, back to top">
+          <Link href="/#top" className={styles.brand} aria-label="Fabeha Rizvi, back to top">
             FR<span>.</span>
-          </a>
+          </Link>
           <ul className={styles.links}>
             {LINKS.map((l) => (
               <li key={l.href}>
-                <a href={l.href}>{l.label}</a>
+                <Link href={l.href}>{l.label}</Link>
               </li>
             ))}
           </ul>

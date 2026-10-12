@@ -75,13 +75,15 @@ Three items in a row (stacked on phones), each with a big condensed title:
 - **Make teams faster:** Code reviews, test scripts and, as the team grew, short specs and API contracts, so teammates can work in parallel instead of waiting on me.
 
 **This is me.**
-> Frontend engineer with 3+ years of experience, starting in React on the web and moving into React Native. At Boraami, which I co-founded, I lead the frontend with a small international team, working on the mobile app, the admin dashboard and, more recently, the Node.js backend.
+> Frontend engineer with 3+ years of experience, starting in React on the web and moving into React Native. At Boraami, which I co-founded, I lead the frontend with a multinational team across 5+ countries, working on the mobile app, the admin dashboard and, more recently, the Node.js backend.
 >
 > Before that, I built React web apps for a healthcare platform.
 
 ---
 
 ## 5. Selected work: Boraami (case study)
+
+The home page shows a Boraami card with a "Read the case study" link. The full case study has its own page at `/work/boraami`: header, context intro, the feature walkthrough, what Boraami taught me, then links back to work and to contact.
 
 **Intro:**
 > A community-driven social app for the BTS fan community, live on the App Store and Google Play. I've been on the founding team since November 2022 and have led the mobile app since its first commit in January 2024.
@@ -98,6 +100,17 @@ Three items in a row (stacked on phones), each with a big condensed title:
 | Team | 4 frontend developers, remote and international |
 | So far | 2,000+ downloads, 1,700+ registered users, about 350 monthly active users, 99.7% crash-free users |
 | Stack | React Native, Expo, Tamagui, Redux Toolkit, Socket.IO, Node.js |
+
+### Context intro (case study page only)
+
+- **The problem:** ARMY is one of the biggest fandoms in the world, and big open platforms tend to fill up with spam and trolls. Boraami is a calm, friendly space built for genuine fans, with the app, its moderation and its backend designed around keeping it that way.
+- **My role:** Co-founder, Frontend Lead
+  - Founding team since Nov 2022: product concept, design direction and team coordination.
+  - Set up the React Native app from its first commit in Jan 2024 and wrote about three quarters of its commits.
+  - Led a team of 4 developers, and the main backend developer since mid-2025.
+- **Team:** Multinational, across 5+ countries
+- **Stack:** React Native, Expo, Tamagui, Redux Toolkit, Socket.IO, Node.js, Express, MongoDB
+- **Timeline:** Nov 2022 founding team · Jan 2024 first commit · Mid-2025 took over the backend · 15 Jun 2026 public launch
 
 ### Feature walkthrough (scroll-driven phone)
 
@@ -120,12 +133,22 @@ The centrepiece: a phone frame on one side that switches screenshots as the read
    - Frontend: Fixed Android out-of-memory crashes on lower-end phones by virtualizing the GIF picker and serving smaller feed images, measured in Sentry.
    - Backend: Server and scheduled-job errors report to Sentry, email failures never block the action behind them, and every paginated endpoint caps page size so no request can scan the whole database.
 
+### Also built: the moderation dashboard (case study page only)
+
+A gated, moderated community needs a place for moderators to work. I built the React admin dashboard on my own: moderators use it to review membership applicants, including the borderline quiz results, handle reports, and manage users and suspensions.
+
+Stack chips: TypeScript, React, Vite, shadcn/ui, Cloudflare Workers
+
+### Link preview
+
+`/work/boraami` has its own preview image (generated at build time): the Boraami title, a one-line summary, the three stats, and the Boraline screenshot in a phone frame.
+
 ### What Boraami taught me
 
 1. **Learning whatever the project needs.** Boraami is where I learned mobile development, building on my React web experience. When the backend needed someone, I learned Node.js and MongoDB on the job and took it over. In 2026 I also brought Claude Code into my workflow to move faster before launch.
 2. **Taking things all the way to done.** Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, rotating credentials across services, and helping register the company.
-3. **Bringing in process as we grew.** We started as a small team focused on shipping. As the app and team grew, I started writing a short spec and API contract before a feature, so teammates could build against mocks while I built the backend, plus review guides so everyone checks for the same things. I also help hire and review pull requests.
-4. **Working across teams and time zones.** Our team spans several continents, so most of our collaboration is written. I work with designers, product and moderators, and write step-by-step device test scripts so teammates can verify a release on their own phones.
+3. **Bringing in process as we grew.** We started as a multinational team across 5+ countries, focused on shipping. As the app and team grew, I started writing a short spec and API contract before a feature, so teammates could build against mocks while I built the backend, plus review guides so everyone checks for the same things. I also help hire and review pull requests.
+4. **Working across teams and time zones.** Our team spans several continents and time zones. I work closely with design, product and moderators, meeting whenever we need to align, and write step-by-step device test scripts so teammates can verify a release on their own phones.
 
 ---
 
@@ -134,7 +157,7 @@ The centrepiece: a phone frame on one side that switches screenshots as the read
 ### Co-founder, Frontend Lead · Boraami LLC
 Nov 2022 – Present · Remote, international team
 
-> Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. The case study above has the details.
+> Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Links to the Boraami case study page.
 
 - Set up the React Native app (Expo, Tamagui), wrote about three quarters of its commits, and ship it to the App Store and Google Play with EAS.
 - Main backend developer since mid-2025 (Node.js, Express, MongoDB): moderation, notifications, the admission quiz and image uploads.
@@ -265,7 +288,7 @@ Screenshots are 589×1280 real Boraami screens. Usernames and post text are repl
 - **Header behaviour:** hides when scrolling down, slides back when scrolling up (always shown near the top).
 - **Hero background:** a subtle canvas starfield mixed with faint code symbols (`</>`, `{ }`, `=>`). Light 3D parallax: nearer particles shift more as the cursor moves, and particles near the cursor link with faint lines. Uses the accent colour, pauses off screen, fewer particles on phones, still with reduced motion.
 - **Section tracker (screens 1440px+ only):** a slim vertical line on the left with one dot per section (About, Boraami, Experience, Stack, Projects, Next role, Contact). It fills as you scroll, the current dot and label light up, and dots are clickable. Hidden on the hero.
-- **Case study phone:** height-capped so it never fills the screen, with room above and below; it follows the header as it hides.
+- **Case study phone (on `/work/boraami`):** height-capped so it never fills the screen, with room above and below; it follows the header as it hides.
 - **Avoid:** purple-to-blue gradients, glowing blobs, skill progress bars, emoji section headings, filler like "passionate developer crafting experiences".
 
 ---

@@ -1,7 +1,8 @@
+import Link from "next/link";
 import styles from "./Experience.module.css";
 
 type Group = { heading?: string; points: string[] };
-type Job = { company: string; role: string; dates: string; place: string; summary?: string; groups: Group[] };
+type Job = { company: string; role: string; dates: string; place: string; summary?: string; caseStudy?: string; groups: Group[] };
 
 /*
   Boraami facts come from the Boraami repos and docs in ~/Documents/Boraami.
@@ -15,7 +16,8 @@ const JOBS: Job[] = [
     dates: "Nov 2022 – Present",
     place: "Remote, international team",
     summary:
-      "Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Live on the App Store and Google Play since June 2026; the case study above has the details.",
+      "Founding team from Nov 2022 (product concept, design direction, team coordination), and frontend lead since Jan 2024, when the codebase started. Live on the App Store and Google Play since June 2026.",
+    caseStudy: "/work/boraami",
     groups: [
       {
         points: [
@@ -59,7 +61,19 @@ export default function Experience() {
               <p className={styles.when}>
                 {j.dates}, {j.place}
               </p>
-              {j.summary && <p className={styles.summary}>{j.summary}</p>}
+              {j.summary && (
+                <p className={styles.summary}>
+                  {j.summary}
+                  {j.caseStudy && (
+                    <>
+                      {" "}
+                      <Link href={j.caseStudy} className={styles.caseLink} data-track="case_study_open" data-label="experience">
+                        Read the case study
+                      </Link>
+                    </>
+                  )}
+                </p>
+              )}
               <div className={styles.groups}>
                 {j.groups.map((g, i) => (
                   <div key={g.heading ?? i} className={styles.group}>

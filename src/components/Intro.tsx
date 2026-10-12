@@ -2,9 +2,6 @@ import HeroBackground from "./HeroBackground";
 import HeroVisual from "./HeroVisual";
 import styles from "./Intro.module.css";
 
-export const APP_STORE = "https://apps.apple.com/in/app/boraami/id6749337745";
-export const PLAY_STORE = "https://play.google.com/store/apps/details?id=app.boraami.mobile";
-
 const BRING = [
   {
     title: "Ship end to end",
@@ -75,7 +72,7 @@ export default function Intro() {
             <div className={styles.aboutText}>
               <p>
                 Frontend engineer with 3+ years of experience, starting in React on the web and moving into React
-                Native. At Boraami, which I co-founded, I lead the frontend with a small international team, working on the mobile app, the admin dashboard and, more recently, the Node.js
+                Native. At Boraami, which I co-founded, I lead the frontend with a multinational team across 5+ countries, working on the mobile app, the admin dashboard and, more recently, the Node.js
                 backend.
               </p>
               <p>Before that, I built React web apps for a healthcare platform.</p>

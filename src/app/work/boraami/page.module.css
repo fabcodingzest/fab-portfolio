@@ -1,0 +1,311 @@
+/* /work/boraami: header, context intro and closing links around the walkthrough */
+
+/* the page opens on content, not a section gap (still clears the fixed header) */
+.page.page {
+  padding-top: calc(64px + 32px);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 160ms;
+}
+
+.back svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 200ms var(--ease-out);
+}
+
+@media (hover: hover) {
+  .back:hover {
+    color: var(--accent);
+  }
+
+  .back:hover svg {
+    transform: translateX(-3px);
+  }
+}
+
+.header {
+  margin-top: 40px;
+}
+
+.title {
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(2.75rem, 9vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.stores {
+  margin-top: 28px;
+}
+
+/* phones: store pills share the row evenly */
+@media (max-width: 599px) {
+  .stores > div > a {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* section headings inside the case study */
+.sectionTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* ---------- context ---------- */
+.context {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.problem {
+  max-width: var(--measure);
+  margin-top: 20px;
+  font-size: 1.1875rem;
+  color: var(--muted);
+}
+
+.facts {
+  display: grid;
+  gap: 24px;
+  margin: 40px 0 0;
+}
+
+@media (min-width: 900px) {
+  .facts {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.facts dt {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.facts dd {
+  margin: 8px 0 0;
+}
+
+.facts ul {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+  padding-left: 1.1em;
+  color: var(--muted);
+}
+
+/* timeline: a row of dated stops on desktop, a vertical list on phones */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  margin: 48px 0 0;
+  padding: 0 0 0 24px;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 5px;
+  width: 1px;
+  background: var(--rule);
+}
+
+.timeline li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -24px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 720px) {
+  .timeline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 24px 0 0;
+  }
+
+  .timeline::before {
+    top: 5px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 1px;
+  }
+
+  .timeline li::before {
+    top: -24px;
+    left: 0;
+  }
+}
+
+/* ---------- walkthrough ---------- */
+.built {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.builtLead {
+  max-width: var(--measure);
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+/* ---------- admin dashboard ---------- */
+.dashboard {
+  display: grid;
+  gap: 20px;
+  margin-top: 64px;
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  background: var(--bg-raised);
+}
+
+.kicker {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.dashboard h2 {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.dashboard p:not(.kicker) {
+  max-width: 44rem;
+  font-size: 1.0625rem;
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 4px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+/* ---------- what I learned ---------- */
+.learned {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.learnedTitle {
+  text-wrap: balance;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.learned ul {
+  display: grid;
+  gap: 32px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .learned ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 56px;
+  }
+}
+
+.learned h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--accent);
+}
+
+.learned p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+/* ---------- closing links ---------- */
+.end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 72px;
+}
+
+@media (max-width: 599px) {
+  .end {
+    flex-direction: column-reverse;
+  }
+
+  .end > a {
+    justify-content: center;
+  }
+}
