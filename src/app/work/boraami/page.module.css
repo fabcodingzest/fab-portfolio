@@ -37,8 +37,28 @@
   }
 }
 
+/* text, then the welcome screen in a phone: beside the text on desktop, below it on phones */
 .header {
+  display: grid;
+  gap: 40px;
   margin-top: 40px;
+}
+
+.headerPhone {
+  width: min(220px, 55vw);
+  justify-self: center;
+}
+
+@media (min-width: 960px) {
+  .header {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    align-items: center;
+    gap: 72px;
+  }
+
+  .headerPhone {
+    width: 260px;
+  }
 }
 
 .title {

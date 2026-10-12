@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import Phone from "@/components/Phone";
 import BoraamiWalkthrough from "@/components/BoraamiWalkthrough";
 import StoreLinks from "@/components/StoreLinks";
 import { DASHBOARD, LEAD, LEARNED, PROBLEM, ROLE, STACK, STATS, TEAM, TIMELINE } from "@/components/boraami";
@@ -30,22 +31,27 @@ export default function BoraamiPage() {
 
             {/* header: same facts as the home page card */}
             <header className={styles.header}>
-              <p className={card.badge}>Case study · Live on both app stores</p>
-              <h1 id="boraami-title" className={styles.title}>
-                Boraami
-              </h1>
-              <p className={card.featuredLead}>{LEAD}</p>
-              <dl className={card.stats}>
-                {STATS.map((s) => (
-                  <div key={s.label}>
-                    <dt>{s.label}</dt>
-                    <dd>{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-              <p className={card.since}>Since public launch on 15 June 2026</p>
-              <div className={styles.stores}>
-                <StoreLinks />
+              <div>
+                <p className={card.badge}>Case study · Live on both app stores</p>
+                <h1 id="boraami-title" className={styles.title}>
+                  Boraami
+                </h1>
+                <p className={card.featuredLead}>{LEAD}</p>
+                <dl className={card.stats}>
+                  {STATS.map((s) => (
+                    <div key={s.label}>
+                      <dt>{s.label}</dt>
+                      <dd>{s.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className={card.since}>Since public launch on 15 June 2026</p>
+                <div className={styles.stores}>
+                  <StoreLinks />
+                </div>
+              </div>
+              <div className={styles.headerPhone}>
+                <Phone priority sizes="(min-width: 960px) 260px, 50vw" screens={[{ src: "/screens/welcome.png", alt: "Boraami welcome screen: \"We are not seven, with you\", with sign-in and create-account buttons" }]} />
               </div>
             </header>
 
