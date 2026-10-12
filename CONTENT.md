@@ -149,7 +149,7 @@ Both pages have preview images generated at build time, in the site's fonts and 
 ### What Boraami taught me
 
 1. **Learning whatever the project needs.** Boraami is where I learned mobile development, building on my React web experience. When the backend needed someone, I learned Node.js and MongoDB on the job and took it over. In 2026 I also brought Claude Code into my workflow to move faster before launch.
-2. **Taking things all the way to done.** Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, and rotating credentials across services. On the business side, I proposed forming Boraami LLC and set it up with my co-founder.
+2. **Taking things all the way to done.** Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, rotating credentials across services, and forming Boraami LLC with my co-founder.
 3. **Bringing in process as we grew.** We started as a multinational team across 5+ countries, focused on shipping. As the app and team grew, I introduced specs and API contracts before each feature, so teammates could build against mocks while I built the backend, and review guides so everyone checks for the same things. I also hire and review pull requests.
 4. **Working across teams and time zones.** Our team spans several continents and time zones. I work closely with design, product and moderators, meeting whenever we need to align, and write step-by-step device test scripts so teammates can verify a release on their own phones.
 
@@ -166,7 +166,7 @@ Nov 2022 – Present · Remote, international team
 - Main backend developer since mid-2025 (Node.js, Express, MongoDB): moderation, notifications, the admission quiz and image uploads.
 - Built the React admin dashboard (TypeScript, Vite, shadcn/ui, Cloudflare Workers) that moderators use to review applicants, reports and users.
 - Lead a team of 4 frontend developers across time zones: hiring, code reviews, a shared component library with light and dark themes, and, more recently, specs and API contracts.
-- Proposed forming Boraami LLC and set it up with my co-founder; handled the store developer accounts and the App Store transfer to the company.
+- Worked on the business side with my co-founder: forming Boraami LLC and setting up the store developer accounts.
 
 *(Commit shares are from git, counting non-merge commits across all branches as of Oct 2026: app ~74%, admin dashboard 100%, backend ~85% since June 2025.)*
 

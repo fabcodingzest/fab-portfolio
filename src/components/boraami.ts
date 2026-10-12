@@ -90,7 +90,7 @@ export const LEARNED = [
   },
   {
     title: "Taking things all the way to done",
-    body: "Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, moving the App Store listing to the company account, and rotating credentials across services. On the business side, I proposed forming Boraami LLC and set it up with my co-founder.",
+    body: "Beyond features, I took care of what keeps an app alive: EAS builds and store reviews, rotating credentials across services, and forming Boraami LLC with my co-founder.",
   },
   {
     title: "Bringing in process as we grew",

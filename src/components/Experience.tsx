@@ -25,7 +25,7 @@ const JOBS: Job[] = [
           "Main backend developer since mid-2025 (Node.js, Express, MongoDB): moderation, notifications, the admission quiz and image uploads.",
           "Built the React admin dashboard (TypeScript, Vite, shadcn/ui, Cloudflare Workers) that moderators use to review applicants, reports and users.",
           "Lead a team of 4 frontend developers across time zones: hiring, code reviews, a shared component library with light and dark themes, and, more recently, specs and API contracts.",
-          "Proposed forming Boraami LLC and set it up with my co-founder; handled the store developer accounts and the App Store transfer to the company.",
+          "Worked on the business side with my co-founder: forming Boraami LLC and setting up the store developer accounts.",
         ],
       },
     ],
